@@ -1,22 +1,11 @@
 import os
-import base64
 import numpy as np
-from face_recognition import load_image_file, face_encodings
+from image_tools import base64_to_embedding
 
 def add_face(name, image_data):
-    as_bytes = image_data.encode('utf-8')
-    decoded = base64.decodestring(as_bytes)
-    embedding = get_embedding(decoded)
+    embedding = base64_to_embedding(image_data)
     add_name(name)
     add_embedding(embedding)
-
-def get_embedding(image):
-    with open("temp.jpg", "wb") as f:
-        f.write(image)
-
-    img = load_image_file('temp.jpg')
-
-    return face_encodings(img)[0]
 
 def add_name(name):
     with open('names.txt', 'a') as names_file:
