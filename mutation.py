@@ -1,4 +1,5 @@
 import graphene
+import base64
 
 class AddFace(graphene.Mutation):
     class Arguments:
@@ -8,10 +9,11 @@ class AddFace(graphene.Mutation):
     ok = graphene.Boolean()
 
     def mutate(self, info, name, image_data):
-        # TODO: Add face here
+        images = map(base64.decodestring, image_data)
 
         ok = True
-        return CreatePerson(ok=ok)
+        
+        return AddFace(ok=ok)
 
 class Mutation(graphene.ObjectType):
     add_face = AddFace.Field()
