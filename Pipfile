@@ -9,6 +9,7 @@ face-recognition = "*"
 flask = "*"
 graphene = "*"
 flask-graphql = "*"
+img-rotate = "*"
 
 [dev-packages]
 pylint = "*"

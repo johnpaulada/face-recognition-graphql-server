@@ -1,5 +1,6 @@
 import base64
 from face_recognition import load_image_file, face_encodings
+from img_rotate import fix_orientation
 
 def base64_to_embedding(image_data, multiple=False):
     as_bytes = image_data.encode('utf-8')
@@ -11,6 +12,8 @@ def base64_to_embedding(image_data, multiple=False):
 def get_embedding(image, multiple=False):
     with open("temp.jpg", "wb") as f:
         f.write(image)
+
+    fix_orientation("temp.jpg", save_over=True)
 
     img = load_image_file('temp.jpg')
     encodings = face_encodings(img)
