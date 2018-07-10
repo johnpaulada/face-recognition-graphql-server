@@ -67,6 +67,16 @@ You'll get a response similar to this:
 
 where `names` is a list of possible matches.
 
+### Using Docker
+
+Run this on your terminal:
+
+```sh
+docker run -p 8000:8000 johnpaulada/face-recognition-graphql-server
+```
+
+then access it at `http://localhost:8000/graphql`.
+
 ## Known Issues
 1. Can't handle duplicate names yet.
 2. No display on the `/` (root) path.
