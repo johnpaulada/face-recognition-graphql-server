@@ -13,7 +13,10 @@ def get_embedding(image, multiple=False):
     with open("temp.jpg", "wb") as f:
         f.write(image)
 
-    fix_orientation("temp.jpg", save_over=True)
+    try:
+        fix_orientation("temp.jpg", save_over=True)
+    except:
+        print("Warning: Did not fix orientation because there was no EXIF data.")
 
     img = load_image_file('temp.jpg')
     encodings = face_encodings(img)
