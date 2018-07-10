@@ -8,8 +8,9 @@ def recognize_faces(image_data):
     names = get_names()
     known_faces = np.load('embeddings.npy')
     matched_names = get_matched_names(known_faces, embeddings, names)
+    trimmed_names = [x.strip(' \t\n\r') for x in matched_names]
 
-    return matched_names
+    return trimmed_names
 
 def get_matched_names(known_faces, embeddings, names):
     name_indices = get_name_indices(known_faces, embeddings)
