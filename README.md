@@ -13,5 +13,8 @@ GraphQL Server for Facial Recognition. Work in Progress.
 2. Install cmake.
 3. Run `pipenv install`. You're all set!
 
+## Known Issues
+1. Can't handle duplicate names yet.
+
 ## License
 MIT
