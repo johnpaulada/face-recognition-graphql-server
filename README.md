@@ -18,7 +18,7 @@ To start the server, run `pipenv run python server.py`.
 When you see something like:
 
 ```
-Running on http://0.0.0.0:8000/ (Press CTRL+C to quit)
+Serving on http://0.0.0.0:8000
 ```
 
 then the server is running and open it in `http://localhost:8000/graphql`.
@@ -69,6 +69,8 @@ where `names` is a list of possible matches.
 
 ## Known Issues
 1. Can't handle duplicate names yet.
+2. No display on the `/` (root) path.
+3. `recognizeFaces` is a Query.
 
 ## License
 MIT

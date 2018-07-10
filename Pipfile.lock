@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "773ecd8c2391f843274985aa067d743516cff62fabb36bfd4fff259e5011d082"
+            "sha256": "f0582f00c13e7ab6fd6486d40734e1a4c625ea1e4c998770d7b83c54f966ee90"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -32,10 +32,10 @@
         },
         "dlib": {
             "hashes": [
-                "sha256:1d53739f4fa892874e61bb9602850d8d0afe8fbfb9262ff21981f594719384ed"
+                "sha256:88470836cb649b380f6f9eca054f08a94b115ee2845b1eccbf8a410efb2e3dc1"
             ],
             "index": "pypi",
-            "version": "==19.13.1"
+            "version": "==19.14.0"
         },
         "face-recognition": {
             "hashes": [
@@ -211,6 +211,14 @@
                 "sha256:d400a9344254803a2368533e4533a4200d21eb7b6b729c173bc38201a74db3f2"
             ],
             "version": "==3.6.4"
+        },
+        "waitress": {
+            "hashes": [
+                "sha256:40b0f297a7f3af61fbfbdc67e59090c70dc150a1601c39ecc9f5f1d283fb931b",
+                "sha256:d33cd3d62426c0f1b3cd84ee3d65779c7003aae3fc060dee60524d10a57f05a9"
+            ],
+            "index": "pypi",
+            "version": "==1.1.0"
         },
         "werkzeug": {
             "hashes": [
